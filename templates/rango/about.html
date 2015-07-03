@@ -1,18 +1,34 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-{% load staticfiles %} <!-- New line -->
+{% load staticfiles %}
 
-<html>
+{% block title %}About{% endblock %}
 
-    <head>
-        <title>Rango</title>
-    </head>
-
-    <body>
+{% block body_block %}
+    <body background ="{% static "images/feraligatr.jpg" %}">
         <h1>Rango says...</h1>
+        <p>You have visited this site {{ visits }} time(s). The last visit was at {{last_visit}}.</p>
         hello world! This is about! <strong>{{ boldmessage }}</strong><br />
         <a href="/rango/">Going Back Yo</a><br />
-        <img src="{% static "images/feraligatr.jpg" %}" alt="Picture of Rango" /> <!-- New line -->
+        <!--<img src="{% static "images/feraligatr.jpg" %}" alt="Picture of Rango" /> &lt;!&ndash; New line &ndash;&gt;-->
     </body>
+{% endblock %}
 
-</html>
+<!--<!DOCTYPE html>-->
+
+<!--{% load staticfiles %} &lt;!&ndash; New line &ndash;&gt;-->
+
+<!--<html>-->
+
+    <!--<head>-->
+        <!--<title>Rango</title>-->
+    <!--</head>-->
+
+    <!--<body>-->
+        <!--<h1>Rango says...</h1>-->
+        <!--hello world! This is about! <strong>{{ boldmessage }}</strong><br />-->
+        <!--<a href="/rango/">Going Back Yo</a><br />-->
+        <!--<img src="{% static "images/feraligatr.jpg" %}" alt="Picture of Rango" /> &lt;!&ndash; New line &ndash;&gt;-->
+    <!--</body>-->
+
+<!--</html>-->
